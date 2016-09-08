@@ -122,14 +122,14 @@ class Layout extends Component {
               {/*Showing the login UI*/}
               {this.state.isLogin ? <Telescope.components.UserLogin /> : null}
 
-              <div >
+              <div>
                   <div className="constraintWidth_ZyYbM container_3aBgK">
                       <FlashContainer component={Telescope.components.FlashMessages}/>
                   </div>
 
                   <Telescope.components.Newsletter />
                   <div className="constraintWidth_ZyYbM container_3aBgK">
-                      {this.props.children}
+                      {/*{this.props.children}*/}
                   </div>
 
               </div>
