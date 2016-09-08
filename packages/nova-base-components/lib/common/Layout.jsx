@@ -33,6 +33,19 @@ class Layout extends Component {
         this.context.messages.pushAndPostShow(postId);
     }
 
+    renderPopoverMenus() {
+        const popoverMenu = this.state.popoverMenu;
+        if (popoverMenu) {
+            switch (popoverMenu.type) {
+                case "MoreButton":
+                    return (<Telescope.components.HeaderPopoverMenu comp={this.state.popoverMenu}/>)
+                case "LoggedUserMenu":
+                    return (<Telescope.components.UsersPopoverMenu comp={this.state.popoverMenu}
+                                                                   user={this.props.currentUser}/>)
+            }
+        }
+    }
+
     render() {
         let classValue = "wrapper" + (this.state.isSearching ? " search-mode" : "") + (this.state.cachePost ? " no-scroll" : "");
 
@@ -48,7 +61,7 @@ class Layout extends Component {
               </div>
 
               {/*Rendering the popover menus*/}
-              {/*{this.renderPopoverMenus()}*/}
+              {this.renderPopoverMenus()}
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
               {/*Showing the post's detail pages*/}
