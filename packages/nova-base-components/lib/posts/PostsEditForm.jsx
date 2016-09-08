@@ -1,4 +1,3 @@
-import Telescope from 'meteor/nova:lib';
 import React, { PropTypes, Component } from 'react';
 import { FormattedMessage, intlShape } from 'react-intl';
 import NovaForm from "meteor/nova:forms";
@@ -30,12 +29,10 @@ class PostsEditForm extends Component{
 
   renderAdminArea() {
     return (
-      <Telescope.components.CanDo action="posts.edit.all">
-        <div className="posts-edit-form-admin">
-          <div className="posts-edit-form-id">ID: {this.props.post._id}</div>
-          <Telescope.components.PostsStats post={this.props.post} />
-        </div>
-      </Telescope.components.CanDo>
+      <div className="posts-edit-form-admin">
+        <div className="posts-edit-form-id">ID: {this.props.post._id}</div>
+        <Telescope.components.PostsStats post={this.props.post} />
+      </div>
     )
   }
 
@@ -44,7 +41,7 @@ class PostsEditForm extends Component{
   
     return (
       <div className="posts-edit-form">
-        {this.renderAdminArea()}
+        {Users.canDo(this.context.currentUser, "posts.edit.all") ?  this.renderAdminArea() : null}
         <DocumentContainer 
           collection={Posts} 
           publication="posts.single" 

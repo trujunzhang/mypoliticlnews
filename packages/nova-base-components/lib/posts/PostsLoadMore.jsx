@@ -1,15 +1,21 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import {FormattedMessage} from 'react-intl';
+var Waypoint = require('react-waypoint');
 
 const PostsLoadMore = ({loadMore, count, totalCount}) => {
-  return (
-    <a className="posts-load-more" onClick={loadMore}>
-      <span><FormattedMessage id="posts.load_more"/></span>
-      &nbsp;
-      {totalCount ? <span className="load-more-count">{`(${count}/${totalCount})`}</span> : null}
-    </a>
-  )
-}
+    return (
+      <div>
+          <Waypoint
+            onEnter={({previousPosition, currentPosition, event}) => {
+                // do something useful!
+                loadMore(event);
+            }}
+            threshold={0}
+          />
+          <a className="posts-load-more" onClick={loadMore}>Show More…</a>
+      </div>
+    )
+};
 
 PostsLoadMore.displayName = "PostsLoadMore";
 

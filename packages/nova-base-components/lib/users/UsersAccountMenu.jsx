@@ -1,20 +1,25 @@
 import Telescope from 'meteor/nova:lib';
-import React, { PropTypes, Component } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { Dropdown, Button } from 'react-bootstrap';
+import React, {PropTypes, Component} from 'react';
+import {FormattedMessage} from 'react-intl';
+import {Dropdown, Button} from 'react-bootstrap';
+import Posts from "meteor/nova:posts";
 
-const UsersAccountMenu = () => {
+class UsersAccountMenu extends Component {
+    showLogin() {
+        this.context.messages.appStatus.showLoginUI();
+    }
 
-  return (
-    <Dropdown id="accounts-dropdown" className="users-account-menu">
-      <Dropdown.Toggle>
-        <FormattedMessage id="users.log_in"/>
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Telescope.components.UsersAccountForm />
-      </Dropdown.Menu>
-    </Dropdown>
-  ) 
+    render() {
+        return (
+          <a
+            className="login_258vb header--login-button-legacy-tests-only secondaryBoldText_1PBCf secondaryText_PM80d subtle_1BWOT base_3CbW2"
+            onClick={this.showLogin.bind(this)}>Login</a>
+        )
+    }
+}
+
+UsersAccountMenu.contextTypes = {
+    messages: React.PropTypes.object
 };
 
 UsersAccountMenu.displayName = "UsersAccountMenu";

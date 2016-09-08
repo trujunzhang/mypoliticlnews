@@ -25,13 +25,13 @@ const PostsViews = (props, context) => {
         id="views-dropdown"
       >
         {views.map(view => 
-          <LinkContainer key={view} to={{pathname: "/", query: {...query, view: view}}} /*to={}*/ className="dropdown-item">
+          <LinkContainer key={view} to={{pathname: "/", query: {...query, view: view}}} /*to={}*/ className="dropdown-item" activeClassName="posts-view-active">
             <MenuItem>
               <FormattedMessage id={"posts."+view}/>
             </MenuItem>
           </LinkContainer>
         )}
-        <LinkContainer to={"/daily"} /*to={{name: "posts.daily"}}*/ className="dropdown-item">
+        <LinkContainer to={"/daily"} /*to={{name: "posts.daily"}}*/ className="dropdown-item" activeClassName="posts-view-active">
           <MenuItem className={"bar"}>
             <FormattedMessage id="posts.daily"/>
           </MenuItem>

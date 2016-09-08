@@ -10,10 +10,10 @@ class App extends Component {
   }
 
   getChildContext() {
-    
+
     const messages = Telescope.strings[this.getLocale()] || {};
     const intlProvider = new IntlProvider({locale: this.getLocale()}, messages);
-    
+
     const {intl} = intlProvider.getChildContext();
 
     return {
@@ -29,9 +29,9 @@ class App extends Component {
     return (
       <IntlProvider locale={this.getLocale()} messages={Telescope.strings[this.getLocale()]}>
         {
-          this.props.ready ? 
-            <Telescope.components.Layout currentUser={this.props.currentUser}>{this.props.children}</Telescope.components.Layout> 
-          : <Telescope.components.AppLoading />
+          this.props.ready ?
+            <Telescope.components.Layout currentUser={this.props.currentUser}>{this.props.children}</Telescope.components.Layout>
+          : null
         }
       </IntlProvider>
     )
@@ -45,7 +45,7 @@ App.propTypes = {
   actions: React.PropTypes.object,
   events: React.PropTypes.object,
   messages: React.PropTypes.object,
-}
+};
 
 App.childContextTypes = {
   currentUser: React.PropTypes.object,
@@ -53,7 +53,7 @@ App.childContextTypes = {
   events: React.PropTypes.object,
   messages: React.PropTypes.object,
   intl: intlShape
-}
+};
 
 module.exports = AppComposer(App);
 export default AppComposer(App);

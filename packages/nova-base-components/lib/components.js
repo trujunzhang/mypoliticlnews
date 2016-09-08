@@ -5,6 +5,10 @@ import Telescope from 'meteor/nova:lib';
 Telescope.registerComponent("App",                  require('./common/App.jsx'));
 Telescope.registerComponent("Footer",               require('./common/Footer.jsx'));
 Telescope.registerComponent("Header",               require('./common/Header.jsx'));
+Telescope.registerComponent("HeaderSearchForm",     require('./common/HeaderSearchForm.jsx'));
+Telescope.registerComponent("HeaderContent",        require('./common/HeaderContent.jsx'));
+Telescope.registerComponent("HeaderNavigation",     require('./common/HeaderNavigation.jsx'));
+Telescope.registerComponent("HeaderPopoverMenu",    require('./common/HeaderPopoverMenu.jsx'));
 Telescope.registerComponent("Layout",               require('./common/Layout.jsx'));
 Telescope.registerComponent("Logo",                 require('./common/Logo.jsx'));
 Telescope.registerComponent("Flash",                require('./common/Flash.jsx'));
@@ -32,6 +36,8 @@ Telescope.registerComponent("PostsItem",            require('./posts/PostsItem.j
 Telescope.registerComponent("PostsLoading",         require('./posts/PostsLoading.jsx'));
 Telescope.registerComponent("PostsViews",           require('./posts/PostsViews.jsx'));
 Telescope.registerComponent("PostsList",            require('./posts/PostsList.jsx'));
+Telescope.registerComponent("PostsInfiniteList",    require('./posts/PostsInfiniteList.jsx'));
+Telescope.registerComponent("PostsListTitle",       require('./posts/PostsListTitle.jsx'));
 Telescope.registerComponent("PostsListHeader",      require('./posts/PostsListHeader.jsx'));
 Telescope.registerComponent("PostsCategories",      require('./posts/PostsCategories.jsx'));
 Telescope.registerComponent("PostsCommenters",      require('./posts/PostsCommenters.jsx'));
@@ -42,7 +48,17 @@ Telescope.registerComponent("PostsDay",             require('./posts/PostsDay.js
 Telescope.registerComponent("PostsThumbnail",       require('./posts/PostsThumbnail.jsx'));
 Telescope.registerComponent("PostsEditForm",        require('./posts/PostsEditForm.jsx'));
 Telescope.registerComponent("PostsNewForm",         require('./posts/PostsNewForm.jsx'));
-Telescope.registerComponent("PostsCommentsThread",        require('./posts/PostsCommentsThread.jsx'));
+Telescope.registerComponent("PostsCommentsThread",  require('./posts/PostsCommentsThread.jsx'));
+Telescope.registerComponent("PostsEntrycontent",    require('./posts/PostsEntrycontent.jsx'));
+
+
+// posts single
+
+Telescope.registerComponent("PostsPopup",           require('./single/PostsPopup.jsx'));
+Telescope.registerComponent("PostsSingleHeader",    require('./single/PostsSingleHeader.jsx'));
+Telescope.registerComponent("PostDetail",           require('./single/PostDetail.jsx'));
+Telescope.registerComponent("PostTagItem",          require('./single/PostTagItem.jsx'));
+
 
 // comments
 
@@ -52,6 +68,8 @@ Telescope.registerComponent("CommentsNode",         require('./comments/Comments
 Telescope.registerComponent("CommentsNew",          require('./comments/CommentsNew.jsx'));
 Telescope.registerComponent("CommentsEdit",         require('./comments/CommentsEdit.jsx'));
 Telescope.registerComponent("CommentsLoadMore",     require('./comments/CommentsLoadMore.jsx'));
+Telescope.registerComponent("CommentsNodeList",     require('./comments/CommentsNodeList.jsx'));
+
 
 // categories
 
@@ -76,3 +94,22 @@ Telescope.registerComponent("UsersName",            require('./users/UsersName.j
 Telescope.registerComponent("UsersMenu",            require('./users/UsersMenu.jsx'));
 Telescope.registerComponent("UsersAccountMenu",     require('./users/UsersAccountMenu.jsx'));
 Telescope.registerComponent("UsersAccountForm",     require('./users/UsersAccountForm.jsx'));
+Telescope.registerComponent("UsersPopoverMenu",     require('./users/UsersPopoverMenu.jsx'));
+
+// user's profile
+Telescope.registerComponent("UserLogin",            require('./users/UserLogin.jsx'));
+Telescope.registerComponent("UserProfileHeader",    require('./users/UserProfileHeader.jsx'));
+
+
+// widget for Calendar
+Telescope.registerComponent("WidgetCalendar",       require('./widgetscalendar/WidgetCalendar.jsx'));
+Telescope.registerComponent("DayNames",             require('./widgetscalendar/DayNames.jsx'));
+Telescope.registerComponent("Week",                 require('./widgetscalendar/Week.jsx'));
+
+// widget for Topics
+Telescope.registerComponent("WidgetTopics",         require('./widgettopics/WidgetTopics.jsx'));
+
+
+// sidebar
+Telescope.registerComponent("WidgetHeader",         require('./sidebar/WidgetHeader.jsx'));
+

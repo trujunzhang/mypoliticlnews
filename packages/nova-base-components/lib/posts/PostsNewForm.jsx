@@ -1,4 +1,3 @@
-import Telescope from 'meteor/nova:lib';
 import React, { PropTypes, Component } from 'react';
 import { intlShape } from 'react-intl';
 import NovaForm from "meteor/nova:forms";
@@ -10,11 +9,7 @@ const PostsNewForm = (props, context) => {
   const router = props.router;
 
   return (
-    <Telescope.components.CanDo
-      action="posts.new"
-      noPermissionMessage="users.cannot_post"
-      displayNoPermissionMessage={true}
-    >
+    <Telescope.components.CanCreatePost>
       <div className="posts-new-form">
         <NovaForm 
           collection={Posts} 
@@ -26,7 +21,7 @@ const PostsNewForm = (props, context) => {
           }}
         />
       </div>
-    </Telescope.components.CanDo>
+    </Telescope.components.CanCreatePost>
   )
 }
 

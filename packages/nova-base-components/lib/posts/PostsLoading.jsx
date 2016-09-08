@@ -1,10 +1,11 @@
-import Telescope from 'meteor/nova:lib';
 import React from 'react';
 
 const PostsLoading = props => {
-  const Loading = Telescope.components.Loading;
-  return <div className="posts-load-more-loading"><Loading/></div>
-}
+    const Loading = Telescope.components.Loading;
+    return <div>
+        <span className="loading_2hQxH featured_2W7jd subtle_1BWOT base_3CbW2">Hunting down posts...</span>
+    </div>
+};
 
 PostsLoading.displayName = "PostsLoading";
 

@@ -1,4 +1,3 @@
-import Telescope from 'meteor/nova:lib';
 import React from 'react';
 
 const PostsStats = ({post}) => {
