@@ -82,3 +82,14 @@ Telescope.registerComponent("UsersAccountMenu",     require('./users/UsersAccoun
 Telescope.registerComponent("UsersAccountForm",     require('./users/UsersAccountForm.jsx'));
 
 Telescope.registerComponent("UserLogin",            require('./users/UserLogin.jsx'));
+
+// widget for Calendar
+Telescope.registerComponent("WidgetCalendar",       require('./widgetscalendar/WidgetCalendar.jsx'));
+Telescope.registerComponent("DayNames",             require('./widgetscalendar/DayNames.jsx'));
+Telescope.registerComponent("Week",                 require('./widgetscalendar/Week.jsx'));
+
+// widget for Topics
+Telescope.registerComponent("WidgetTopics",         require('./widgettopics/WidgetTopics.jsx'));
+
+// sidebar
+Telescope.registerComponent("WidgetHeader",         require('./sidebar/WidgetHeader.jsx'));
