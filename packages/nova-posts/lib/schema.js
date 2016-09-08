@@ -90,6 +90,22 @@ Posts.schemaJSON = {
     order: 20
   },
   /**
+   Tags
+   */
+  tags: {
+    type: [String],
+    optional: true,
+    publish: true,
+  },
+  /**
+   custom_url, news' origin url
+   */
+  custom_url:{
+    type: String,
+    optional: true,
+    publish: true,
+  },
+  /**
     Slug
   */
   slug: {
@@ -235,7 +251,7 @@ Posts.schemaJSON = {
     publish: true,
   },
   /**
-    The post author's `_id`. 
+    The post author's `_id`.
   */
   userId: {
     type: String,
