@@ -48,14 +48,16 @@ class UsersMenu extends Component {
             </span>
               </a>
               <a className="userMenu_3flqi" data-test="user-menu" onClick={this.popoverUserMenus.bind(this)}>
-
             <span className="user-image">
               <div className="container_22rD3 user-image--image user_avator">
                 <div className="container__Ql6q lazyLoadContainer_3KgZD">
+                  <img ref="userProfile"
+                       height="32"
+                       src="https://ph-avatars.imgix.net/641022/original?auto=format&amp;codec=mozjpeg&amp;cs=strip&amp;w=32&amp;h=32&amp;fit=crop"
+                       width="32"/>
                 </div>
               </div>
             </span>
-
               </a>
           </div>
         )
