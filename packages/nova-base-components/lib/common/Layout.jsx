@@ -64,7 +64,7 @@ class Layout extends Component {
               {this.renderPopoverMenus()}
 
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
-              {/*Showing the post's detail pages*/}
+              {/*Popup the post's detail pages*/}
               {/*{this.renderPosts()}*/}
               {/*Popup the login UI*/}
               {this.state.isLogin ? <Telescope.components.UserLogin /> : null}
