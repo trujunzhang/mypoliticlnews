@@ -66,8 +66,8 @@ class Layout extends Component {
               <div className={this.state.isSearching ? 'overlayActive_oQWJ3' : 'overlayInactive_1UI7W'}></div>
               {/*Showing the post's detail pages*/}
               {/*{this.renderPosts()}*/}
-              {/*Showing the login UI*/}
-              {/*{this.state.isLogin ? <Telescope.components.UserLogin /> : null}*/}
+              {/*Popup the login UI*/}
+              {this.state.isLogin ? <Telescope.components.UserLogin /> : null}
 
               <div >
                   <div className="constraintWidth_ZyYbM container_3aBgK">
