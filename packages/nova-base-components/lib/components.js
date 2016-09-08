@@ -50,6 +50,16 @@ Telescope.registerComponent("PostsCommentsThread",  require('./posts/PostsCommen
 
 Telescope.registerComponent("PostsListTitle",       require('./posts/PostsListTitle.jsx'));
 
+
+// posts single
+
+Telescope.registerComponent("PostsPopup",           require('./single/PostsPopup.jsx'));
+Telescope.registerComponent("PostsSingleHeader",    require('./single/PostsSingleHeader.jsx'));
+Telescope.registerComponent("PostDetail",           require('./single/PostDetail.jsx'));
+Telescope.registerComponent("PostTagItem",          require('./single/PostTagItem.jsx'));
+
+
+
 // comments
 
 Telescope.registerComponent("CommentsItem",         require('./comments/CommentsItem.jsx'));
