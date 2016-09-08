@@ -19,32 +19,10 @@ const delay = (function () {
 
 class PostsItem extends Component {
 
-    renderCategories() {
-        return this.props.post.categoriesArray
-          ? <Telescope.components.PostsCategories post={this.props.post}/>
-          : "";
-    }
-
     renderCommenters() {
         return this.props.post.commentersArray
           ? <Telescope.components.PostsCommenters post={this.props.post}/>
           : "";
-    }
-
-    renderActions() {
-
-        const component = (
-          <ModalTrigger title="Edit Post"
-                        component={< a className="posts-action-edit"> <FormattedMessage id="posts.edit"/></a>}>
-              <Telescope.components.PostsEditForm post={this.props.post}/>
-          </ModalTrigger>
-        );
-
-        return (
-          <div className="post-actions">
-              {Users.canEdit(this.context.currentUser, this.props.post) ? component : ""}
-          </div>
-        )
     }
 
     renderActionButtons(post) {
