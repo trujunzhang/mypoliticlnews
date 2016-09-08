@@ -5,12 +5,12 @@ import Categories from "meteor/nova:categories";
 class PostTagItem extends Component {
     render() {
         const tags = this.props.post.tags;
-
-        return (
-          <div className="topics_39_B0" rel="topics-list">
-              {tags.map((menu, key) => {
-                  return (
-                    <div className="topicWrap_2Uvaj" rel="topic-item">
+        if (tags) {
+            return (
+              <div className="topics_39_B0" rel="topics-list">
+                  {tags.map((menu, key) => {
+                      return (
+                        <div className="topicWrap_2Uvaj" rel="topic-item">
                         <span>
                             <a key={key}
                                className="button_2I1re smallSize_1da-r secondaryText_PM80d greySolidColor_270pZ solidVariant_2wWrf"
@@ -18,11 +18,13 @@ class PostTagItem extends Component {
                                 <div className="buttonContainer_wTYxi">{menu}</div>
                             </a>
                         </span>
-                    </div>
-                  )
-              })}
-          </div>
-        )
+                        </div>
+                      )
+                  })}
+              </div>
+            )
+        }
+        return null;
     }
 }
 
